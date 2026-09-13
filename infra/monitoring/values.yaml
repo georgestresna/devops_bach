@@ -1,19 +1,16 @@
 prometheus:
   prometheusSpec:
-    retention: 7d
+    retention: 2d
     resources:
       requests:
-        memory: 512Mi
+        memory: 256Mi
       limits:
-        memory: 1Gi
+        memory: 400Mi
+    # dezactivezi componente grele neesentiale acum
 grafana:
   resources:
     requests:
-      memory: 256Mi
-    limits:
-      memory: 512Mi
+      memory: 128Mi
+      limits: 256Mi
 alertmanager:
-  alertmanagerSpec:
-    resources:
-      requests:
-        memory: 128Mi
+  enabled: false   # il activezi cand ai resurse
