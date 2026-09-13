@@ -1,0 +1,19 @@
+prometheus:
+  prometheusSpec:
+    retention: 7d
+    resources:
+      requests:
+        memory: 512Mi
+      limits:
+        memory: 1Gi
+grafana:
+  resources:
+    requests:
+      memory: 256Mi
+    limits:
+      memory: 512Mi
+alertmanager:
+  alertmanagerSpec:
+    resources:
+      requests:
+        memory: 128Mi
